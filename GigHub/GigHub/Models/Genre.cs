@@ -2,7 +2,7 @@
 {
     using System.ComponentModel.DataAnnotations;
 
-    public class Gener
+    public class Genre
     {
         public byte Id { get; set; }
 

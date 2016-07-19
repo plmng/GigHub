@@ -17,6 +17,6 @@
         public string Venue { get; set; }
 
         [Required]
-        public Gener Gener { get; set; }
+        public Genre Genre { get; set; }
     }
 }

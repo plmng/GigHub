@@ -5,7 +5,7 @@
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<Gener> Geners { get; set; }
+        public DbSet<Genre> Genres { get; set; }
         public DbSet<Gig> Gigs { get; set; }
 
         public ApplicationDbContext()
