@@ -30,11 +30,16 @@
         [Authorize]
         [HttpPost]
         public ActionResult Create(GigFormViewModel model)
-        {         
+        {
+            if (!ModelState.IsValid)
+            {
+                model.Genres = _context.Genres.ToList();
+                return View(model); 
+            }
             var gig = new Gig
             {
                 ArtistId = User.Identity.GetUserId(),
-                DateTime = model.DateTime,
+                DateTime = model.GetDateTime(),
                 GenreId = model.Genre,
                 Venue = model.Venue
             };
